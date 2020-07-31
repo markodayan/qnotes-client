@@ -39,7 +39,7 @@ const AuthState = (props) => {
   const loadUser = async () => {
     setLoading();
     try {
-      const res = await axios.get('/auth/me');
+      const res = await axios.get('/api/auth/me');
       dispatch({ type: USER_LOADED, payload: res.data });
     } catch (err) {
       dispatch({ type: AUTH_ERROR });
@@ -57,7 +57,7 @@ const AuthState = (props) => {
     setLoading();
 
     try {
-      const res = await axios.post('/auth/register', userData, config);
+      const res = await axios.post('/api/auth/register', userData, config);
 
       dispatch({ type: REGISTER_SUCCESS });
       loadUser();
@@ -80,7 +80,7 @@ const AuthState = (props) => {
 
     setLoading();
     try {
-      const res = await axios.post('/auth/login', credentials, config);
+      const res = await axios.post('/api/auth/login', credentials, config);
 
       dispatch({ type: LOGIN_SUCCESS });
       loadUser();
@@ -94,7 +94,7 @@ const AuthState = (props) => {
   const logout = async () => {
     setLoading();
     try {
-      const res = await axios.get('/auth/logout');
+      const res = await axios.get('/api/auth/logout');
       dispatch({ type: LOGOUT });
     } catch (err) {
       console.log('Logout Failed');
@@ -110,7 +110,11 @@ const AuthState = (props) => {
     setLoading();
 
     try {
-      const res = await axios.put('/user/updatepassword', passwords, config);
+      const res = await axios.put(
+        '/api/user/updatepassword',
+        passwords,
+        config
+      );
 
       let successMessage = 'User details updated successfully!';
 
@@ -129,7 +133,7 @@ const AuthState = (props) => {
     };
     setLoading();
     try {
-      const res = await axios.put('/user/updatedetails', details, config);
+      const res = await axios.put('/api/user/updatedetails', details, config);
 
       let successMessage = 'User details updated successfully!';
 
@@ -150,7 +154,7 @@ const AuthState = (props) => {
 
     setLoading();
     try {
-      const res = await axios.post('/auth/forgotpassword', email, config);
+      const res = await axios.post('/api/auth/forgotpassword', email, config);
 
       let successMessage =
         'Reset password link sent to your email. Please follow the instructions given there!';
@@ -172,7 +176,7 @@ const AuthState = (props) => {
 
     try {
       const res = await axios.put(
-        `/auth/resetpassword/${resetPasswordToken}`,
+        `/api/auth/resetpassword/${resetPasswordToken}`,
         password,
         config
       );

@@ -34,7 +34,7 @@ const PostState = (props) => {
   // Get Posts
   const getPosts = async () => {
     try {
-      const res = await axios.get('/posts');
+      const res = await axios.get('/api/posts');
       dispatch({ type: GET_POSTS, payload: res.data.data });
     } catch (err) {
       dispatch({ type: POST_ERROR, payload: err.response.data.error });
@@ -52,7 +52,7 @@ const PostState = (props) => {
     setLoading();
 
     try {
-      const res = await axios.post('/posts', post, config);
+      const res = await axios.post('/api/posts', post, config);
       clearCurrent();
       dispatch({ type: ADD_POST, payload: res.data.post });
     } catch (err) {
@@ -66,7 +66,7 @@ const PostState = (props) => {
   const deletePost = async (id) => {
     setLoading();
     try {
-      const res = await axios.delete(`posts/${id}`);
+      const res = await axios.delete(`/api/posts/${id}`);
       dispatch({ type: DELETE_POST, payload: id });
     } catch (err) {
       let message = err.response.data.error;
@@ -94,7 +94,7 @@ const PostState = (props) => {
     setLoading();
 
     try {
-      const res = await axios.put(`/posts/${post._id}`, post, config);
+      const res = await axios.put(`/api/posts/${post._id}`, post, config);
       clearCurrent();
       dispatch({ type: UPDATE_POST, payload: res.data.post });
     } catch (err) {
