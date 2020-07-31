@@ -1,0 +1,43 @@
+.alert-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 20000;
+}
+
+.alert {
+  border-radius: 10px;
+  width: 80%;
+  padding: 16px;
+  margin: 10px auto;
+  opacity: 0.8;
+  color: #fff;
+}
+
+.alert i {
+  margin-right: 1rem;
+}
+
+.alert-danger {
+  background: rgba(207, 59, 59, 0.65);
+}
+
+.alert-success {
+  background: rgba(35, 187, 35, 0.671);
+}
+
+@media (max-width: 600px) {
+  .alert {
+    width: 95%;
+  }
+}
+
+/* mobile horizontal view  */
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+  .alert-container {
+    top: 0vw;
+    z-index: 20000;
+  }
+}

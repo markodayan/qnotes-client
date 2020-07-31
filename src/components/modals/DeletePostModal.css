@@ -1,0 +1,78 @@
+.dpm-container {
+  background: rgba(4, 9, 26, 0.98);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enclosure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  min-width: 400px;
+}
+
+.dpm-closed {
+  display: none;
+}
+
+.dpm-card {
+  width: 100%;
+}
+
+.dpm-form {
+  background: #fff;
+  margin: auto;
+  padding: 0 5rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  max-width: 500px;
+  /* min-width: 500px;  */
+  box-shadow: 1px 1px 14px -2px rgba(0, 0, 0, 0.53);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.dpm-btn-container {
+  background: hsl(0, 6%, 91%);
+  margin: auto;
+  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.delete-post-btn {
+  font-size: 16px;
+  padding: 8px 25px;
+  border: none;
+  background: hsl(0, 55%, 45%);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.cancel-delete {
+  color: hsl(0, 1%, 23%);
+  margin-right: 10px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cancel-delete:focus {
+  outline: none;
+  cursor: pointer;
+}

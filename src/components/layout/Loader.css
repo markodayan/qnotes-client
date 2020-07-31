@@ -1,0 +1,17 @@
+.loader-backdrop {
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  background: rgba(49, 49, 49, 0.698);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: block;
+  width: 80%;
+  max-width: 360px;
+}

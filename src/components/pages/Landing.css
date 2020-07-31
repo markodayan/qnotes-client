@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+.landing-page-section {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  background: rgb(255, 255, 255);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-page-container {
+  display: flex;
+  height: 70%;
+  justify-content: center;
+}
+
+.lp-writing {
+  position: relative;
+  max-width: 710px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-title {
+  font-family: 'Indie Flower', cursive;
+  color: #fff;
+  text-shadow: 1px 4px rgb(26, 32, 36);
+  font-size: 2.5rem;
+  letter-spacing: 1rem;
+  background: #5961af;
+  padding: 8px 16px;
+  width: 70%;
+
+  max-width: 390px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 2px 20px 20px 0px #62679a96;
+}
+
+.lp-pre-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  text-transform: uppercase;
+  color: #4559a8fd;
+  letter-spacing: 1px;
+  font-size: 17px;
+  width: 70%;
+  max-width: 390px;
+  min-width: 340px;
+}
+
+.lp-main-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 37px;
+  width: 70%;
+  max-width: 390px;
+  min-width: 340px;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.lp-sub-title {
+  width: 70%;
+  max-width: 390px;
+  min-width: 340px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.82);
+}
+
+.lp-get-started {
+  font-family: 'Noto Sans', sans-serif;
+  width: 70%;
+  max-width: 390px;
+  background: #fff;
+  color: #5e69b3;
+  border-radius: 5px;
+  padding: 10px 16px;
+  font-size: 17px;
+  cursor: pointer;
+  border: 2px solid #5e69b3;
+  text-decoration: none;
+  text-align: center;
+}
+
+a.lp-get-started:focus {
+  outline: none;
+}
+
+a.lp-get-started:hover {
+  color: #fff;
+  background: #5e69b3;
+  transition: 0.6s background;
+}
+
+.lp-login {
+  font-family: 'Noto Sans', sans-serif;
+  width: 60%;
+  background: #808080;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 16px;
+  font-size: 17px;
+}
+
+.lp-img-cont {
+  max-width: 700px;
+  max-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lp-img-cont .lp-img {
+  width: 85%;
+  height: 85%;
+}
+
+.landing-footer {
+  background: #343968;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.landing-footer p {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.landing-footer a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+.landing-footer a:hover {
+  transition: 0.4s font-size, 0.4s opacity, 0.4s text-shadow;
+  opacity: 0.25;
+  text-shadow: 1px 2px 2px #8a8989;
+}
+
+@media (max-width: 1200px) {
+  .landing-page-section {
+    /* height: auto; */
+    height: 100%;
+    height: fit-content;
+    padding-bottom: 2.5rem;
+  }
+  .landing-page-container {
+    flex-direction: column;
+    height: 100%;
+    height: fit-content;
+  }
+  .lp-writing {
+    max-width: none;
+    width: 100%;
+    align-items: center;
+  }
+
+  .landing-title {
+    max-width: none;
+    margin-top: 32px;
+    width: 80%;
+  }
+
+  .lp-pre-title {
+    max-width: none;
+    margin: auto;
+    margin-top: 60px;
+    width: 60%;
+  }
+  .lp-main-title {
+    max-width: none;
+    margin: auto;
+    margin-top: 15px;
+    width: 60%;
+  }
+  .lp-sub-title {
+    max-width: none;
+    margin: auto;
+    margin-top: 15px;
+    width: 60%;
+  }
+  .lp-get-started {
+    max-width: none;
+    margin: auto;
+    margin-top: 30px;
+    width: 60%;
+  }
+
+  .lp-img-cont {
+    width: 60%;
+    display: flex;
+    max-width: none;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-page-section {
+    height: fit-content;
+    padding-bottom: 2.5rem;
+  }
+
+  .landing-page-container {
+    flex-direction: column;
+    height: 100%;
+    height: fit-content;
+  }
+
+  .lp-writing {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .landing-title {
+    margin: auto;
+    margin-top: 32px;
+    width: 90%;
+  }
+
+  .lp-pre-title {
+    margin: auto;
+    margin-top: 60px;
+    width: 90%;
+  }
+  .lp-main-title {
+    margin: auto;
+    margin-top: 15px;
+    width: 90%;
+  }
+  .lp-sub-title {
+    margin: auto;
+    margin-top: 15px;
+    width: 90%;
+  }
+  .lp-get-started {
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+  }
+
+  .lp-img-cont {
+    width: 100%;
+    display: flex;
+  }
+
+  .lp-img-cont .lp-img {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+/* iPad Pro vertical  */
+@media only screen and (min-height: 1300px) and (min-width: 1000px) {
+  .landing-page-section {
+    height: 95vh;
+  }
+}

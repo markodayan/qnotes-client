@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+#login-page {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #5761bb;
+}
+
+.auth-form-container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 3rem 0rem;
+  box-shadow: 11px 12px 0px 0px rgba(255, 255, 255, 0.22);
+  max-width: 25rem;
+  width: 100%;
+}
+
+.lock {
+  margin-left: 12px;
+  font-size: 1.2rem;
+  color: #5761bb;
+}
+
+.form-heading {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+#login-page form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 75%;
+}
+
+.password-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-form-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #5469d4;
+}
+
+.form-group input {
+  margin-top: 10px;
+  border: 1px solid rgba(175, 173, 173, 0.356);
+  font-size: 1rem;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.055);
+}
+
+.auth-button {
+  background: #5761bb;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.auth-p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  #login-page {
+    justify-content: flex-start;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  #login-page .auth-form-container {
+    max-width: 1000px;
+    box-shadow: -1px 13px 0px 0px rgba(255, 255, 255, 0.22);
+  }
+
+  #login-page .form-group {
+    width: 90%;
+  }
+
+  /* forgot password link  */
+  .password-line .auth-form-link {
+    font-size: 11px;
+  }
+}
+
+/* mobile horizontal view  */
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+  #login-page {
+    height: fit-content;
+  }
+
+  .auth-form-container {
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+}
+
+/* iPad Pro vertical  */
+@media only screen and (min-height: 1300px) and (min-width: 1000px) {
+  #login-page {
+    height: 95vh;
+  }
+}
